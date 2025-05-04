@@ -1,8 +1,7 @@
-// src/components/TodoList/TodoList.jsx
-import { TodoInfo } from '../TodoInfo/TodoInfo';
+import TodoInfo from '../TodoInfo/TodoInfo';
 
 const TodoList = ({ todos }) => (
-  <section className="TodoList">
+  <section className="TodoList" data-cy="TodoList">
     {todos.map(todo => (
       <TodoInfo key={todo.id} todo={todo} />
     ))}

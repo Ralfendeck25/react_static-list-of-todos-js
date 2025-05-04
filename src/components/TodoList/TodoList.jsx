@@ -1,3 +1,4 @@
+import './TodoList.scss';
 import TodoInfo from '../TodoInfo/TodoInfo';
 
 const TodoList = ({ todos }) => (

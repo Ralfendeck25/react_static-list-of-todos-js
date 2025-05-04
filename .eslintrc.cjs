@@ -18,6 +18,13 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['jsx-a11y', 'import', 'react', 'prettier'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.scss'],
+      },
+    },
+  },
   rules: {
     'function-paren-newline': ['error', 'consistent'],
     'comma-dangle': [
@@ -37,7 +44,6 @@ module.exports = {
         SwitchCase: 1,
         VariableDeclarator: 1,
         outerIIFEBody: 1,
-        // MemberExpression: null,
         FunctionDeclaration: {
           parameters: 1,
           body: 1,
@@ -53,7 +59,6 @@ module.exports = {
         ObjectExpression: 1,
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
-        // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
         ignoredNodes: [
           'JSXElement',
           'JSXElement > *',

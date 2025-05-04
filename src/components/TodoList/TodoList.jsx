@@ -1,10 +1,12 @@
-// Add the required props
+// src/components/TodoList/TodoList.jsx
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
-export const TodoList = ({ todos }) => (
+const TodoList = ({ todos }) => (
   <section className="TodoList">
     {todos.map(todo => (
       <TodoInfo key={todo.id} todo={todo} />
     ))}
   </section>
 );
+
+export default TodoList;

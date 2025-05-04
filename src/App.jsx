@@ -1,7 +1,7 @@
 import './App.scss';
 import todosFromServer from './api/todos.json';
 import usersFromServer from './api/users.json';
-import { TodoList } from './components/TodoList/TodoList';
+import TodoList from './components/TodoList';
 
 const getUserById = userId =>
   usersFromServer.find(user => user.id === userId) || null;
